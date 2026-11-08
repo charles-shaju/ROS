@@ -2,6 +2,12 @@
 
 **Raspberry Pi 4 + ROS 2 Humble + slam_toolbox + RViz on a laptop over WiFi**
 
+## Obstacle Avoidance Models
+
+![Obstacle avoidance model](Model.jpeg)
+
+![Obstacle avoidance model variant](Model1.jpeg)
+
 Version 3.0 — combines the FastDDS-unicast build guide, the Discovery-Server debugging notes, and the calibrated teleoperation/odometry bring-up report. Read the **"Which networking method should I use"** callout in §1 before copying networking commands, and read §6's superseded-version note before copying `base_driver.py` — two incompatible driver/firmware pairs exist across the source material, and only one is current.
 
 ---
@@ -770,9 +776,3 @@ If `/scan`, `/imu/data`, `/odom`, and `/map` don't all show up, check in this or
 - [[ROS/ROS2 youtube]]
 - [[ROS/1. Basics]]
 - [[Toradex/UART Data Read]]
-
-## Obstacle Avoidance Models
-
-![Obstacle avoidance model](Model.jpeg)
-
-![Obstacle avoidance model variant](Model1.jpeg)
