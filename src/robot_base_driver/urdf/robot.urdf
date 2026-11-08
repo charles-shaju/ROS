@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<robot name="mobile_robot">
+
+  <!-- Base Footprint -->
+  <link name="base_footprint"/>
+
+  <!-- Base Link (Center of circular chassis, ground to bottom plate offset ~50mm) -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.09" length="0.15"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0.2 0.2 0.8 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.075" rpy="0 0 0"/>
+  </joint>
+
+  <!-- IMU Link (BNO085: X=110mm, Y=103mm from center top plate, Z=+0.13m) -->
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.11 0.103 0.13" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Laser Frame (TFmini S on top layer, front edge minus 20mm setback) -->
+  <link name="laser_frame"/>
+  <joint name="laser_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="laser_frame"/>
+    <origin xyz="0.07 0 0.14" rpy="0 0 0"/>
+  </joint>
+
+  <!-- RealSense D455 Camera Link (Middle layer, front-facing) -->
+  <link name="camera_link"/>
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.09 0 0.075" rpy="0 0 0"/>
+  </joint>
+
+</robot>

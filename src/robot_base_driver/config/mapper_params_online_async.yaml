@@ -1,0 +1,21 @@
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: false
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_region_strategy: LEVENBERG_MARQUARDT
+    
+    # Frame Settings
+    odom_frame: odom
+    map_frame: map
+    base_frame: base_footprint
+    scan_topic: /scan
+    
+    # Queue and TF Timeout Fixes
+    scan_queue_size: 50
+    transform_timeout: 0.5
+    tf_buffer_duration: 30.0
+    transform_publish_period: 0.05
+    
+    mode: mapping

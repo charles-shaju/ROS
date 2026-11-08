@@ -3,3 +3,11 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+
+# ROS 2
+build/
+install/
+log/
+__pycache__/
+*.pyc
+.vscode/
