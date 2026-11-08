@@ -770,3 +770,9 @@ If `/scan`, `/imu/data`, `/odom`, and `/map` don't all show up, check in this or
 - [[ROS/ROS2 youtube]]
 - [[ROS/1. Basics]]
 - [[Toradex/UART Data Read]]
+
+## Obstacle Avoidance Models
+
+![Obstacle avoidance model](Model.jpeg)
+
+![Obstacle avoidance model variant](Model1.jpeg)
